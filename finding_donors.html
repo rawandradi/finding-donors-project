@@ -8846,7 +8846,7 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Answer:</strong></p>
 <p>The final model I chose is AdaBoost (Adaptive Boosting). I like to think of it as a group of decision makers instead of just one. Instead of using a single decision tree, AdaBoost builds many very simple “yes/no” trees, called weak learners. Each one alone isn’t very accurate, but AdaBoost combines them in a smart way: it looks at the mistakes the earlier trees made and makes the next tree focus on those harder cases. By repeating this process, the model gets better at finding important patterns in the data.</p>
-<p>When it comes to predictions, every small tree gives a vote, and AdaBoost combines all the votes to decide if someone is likely to earn more than $50,000. The good thing about this method is that it doesn’t just memorize the training data (like Random Forest did), but instead learns how to handle the trickiest individuals to classify.</p>
+<p>When it comes to predictions, every small tree gives a vote, and AdaBoost combines all the votes to decide if someone is likely to earn more than $50,000. Unlike Random Forest, which builds many trees independently to reduce overfitting, AdaBoost builds its trees sequentially, with each new tree correcting the mistakes of the previous ones. This makes AdaBoost strong for tricky cases, but it also means it can sometimes be more sensitive to noisy data or outliers.</p>
 </div>
 </div>
 </div>
